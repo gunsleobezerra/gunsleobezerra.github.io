@@ -8,9 +8,7 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
-        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 
     <script src="js/Blob.js"></script>
     <script src="js/FileSaver.js"></script>
@@ -21,6 +19,7 @@
 <body>
 
     <div class="nav_menu">
+
         <button type="button" onclick="add_row()" class="btn btn-success">+ Adicionar</button>
 
         <button type="button" onclick="savearq()" class="btn btn-info"> <i class="material-icons"></i><img
@@ -28,19 +27,23 @@
     </div>
 
     <div class="table-edit">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">RA</th>
+                            <th scope="col">Instituição</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabledata">
 
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">RA</th>
-                    <th scope="col">Instituição</th>
-                </tr>
-            </thead>
-            <tbody class="tabledata">
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-            </tbody>
-        </table>
 
 
 
@@ -52,8 +55,7 @@
 
 
     <!-- Modal Cadastro -->
-    <div class="modal fade" id="cadastromodal" tabindex="-1" role="dialog" aria-labelledby="cadastromodal"
-        aria-hidden="true">
+    <div class="modal fade" id="cadastromodal" tabindex="-1" role="dialog" aria-labelledby="cadastromodal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -69,24 +71,21 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default"
-                            aria-describedby="inputGroup-sizing-default" id="Modalname">
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="Modalname">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">RG</span>
+                            <span class="input-group-text" id="inputGroup-sizing-default">RA</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default"
-                            aria-describedby="inputGroup-sizing-default" id="ModalRG">
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="ModalRA">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Instituição</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default"
-                            aria-describedby="inputGroup-sizing-default" id="Modalinst">
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="Modalinst">
                     </div>
 
 
@@ -102,9 +101,8 @@
         </div>
     </div>
 
-     <!-- Modal Acesso -->
-    <div class="modal fade" id="accessmodal" tabindex="-1" role="dialog" aria-labelledby="accessmodal"
-        aria-hidden="true">
+    <!-- Modal Acesso -->
+    <div class="modal fade" id="accessmodal" tabindex="-1" role="dialog" aria-labelledby="accessmodal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -117,8 +115,8 @@
 
                     <form>
                         <div class="form-group">
-                          
-                          <input id="codinput" placeholder=" Código de Acesso">
+
+                            <input id="codinput" placeholder=" Código de Acesso">
                         </div>
                     </form>
 
@@ -130,15 +128,13 @@
         </div>
     </div>
 
-    
+
     <script rel="text/javascript" src="js/table-editfunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script rel="text/javascript" src="js/bootstrap.min.js"></script>
     <script>
-    
         var initmodal = new Modal('accessmodal');
         initmodal.show();
-    
     </script>
 
 </body>
