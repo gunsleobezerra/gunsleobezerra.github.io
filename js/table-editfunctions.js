@@ -9,7 +9,7 @@ class pessoa {
         this.Inst = Inst;
     }
 }
-
+/* Adiciona Linha na tabela */
 function add_row() {
 
 
@@ -56,4 +56,13 @@ function clearalert() {
 function dell_row(COD){
     COD.parentNode.removeChild(COD);
    console.log(COD);
+}
+
+
+function saveaqr(){
+
+ 
+ 
+ 
+
 }

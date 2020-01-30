@@ -8,11 +8,18 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+        crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
-    
+    <button type="button" onclick="add_row()" class="btn btn-success">+ Adicionar</button>
+
+    <button type="button" onclick="" class="btn btn-info"> <i class="material-icons"></i><img alt="Save List"
+            src="img/saveicon.svg"> Salvar </button>
     <div class="table-edit">
 
         <table class="table table-bordered">
@@ -24,13 +31,11 @@
                 </tr>
             </thead>
             <tbody class="tabledata">
-               
+
             </tbody>
         </table>
 
-        <button type="button" onclick="add_row()" class="btn btn-success">+ Adicionar</button>
        
-        <button type="button" onclick="" class="btn btn-info"> <i class="material-icons"></i><img alt="Save List" src="img/saveicon.svg"> Salvar </button>
 
 
 
@@ -53,7 +58,7 @@
                 <div class="modal-body">
 
 
-                    <div  class="input-group mb-3">
+                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
                         </div>
@@ -61,7 +66,7 @@
                             aria-describedby="inputGroup-sizing-default" id="Modalname">
                     </div>
 
-                    <div  class="input-group mb-3">
+                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">RG</span>
                         </div>
@@ -74,7 +79,7 @@
                             <span class="input-group-text" id="inputGroup-sizing-default">Instituição</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Default"
-                            aria-describedby="inputGroup-sizing-default"  id="Modalinst">
+                            aria-describedby="inputGroup-sizing-default" id="Modalinst">
                     </div>
 
 
@@ -94,7 +99,8 @@
     <script rel="text/javascript" src="js/table-editfunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script rel="text/javascript" src="js/bootstrap.min.js"></script>
-
+    
+    
 </body>
 
 
