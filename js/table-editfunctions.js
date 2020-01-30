@@ -118,7 +118,7 @@ function SetPass() {
 
 
     var cadastro = new Modal('accessmodal');
-    
+
     var COD = new password(document.getElementById("codinput").value);
 
     COD.setpwrd(COD.cod);
