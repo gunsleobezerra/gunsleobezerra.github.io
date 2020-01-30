@@ -85,44 +85,46 @@ function SavetoTable() {
         cod = cod + 1;
 
         $("body").append('<div class="alert alert-success alert-dismissible fade show" role="alert"> Participante Cadastrado !! </div>');
+        document.getElementById("alertR').value = "
+            ";
 
+
+        }
+        cadastro.hide();
+        setTimeout(clearalert, 4000);
+
+    }
+
+
+    function clearalert() {
+
+        var alertsx = $(".alert-success").alert('close');
+    }
+
+    function dell_row(COD) {
+        COD.parentNode.removeChild(COD);
+        console.log(COD);
+        if (cod != 0) { cod-- } else { document.getElementById('alertR').value = "Nenhuma Pessoa Registrada"; }
+    }
+
+
+    function savearq() {
+
+
+        console.log("Saving...");
 
 
     }
-    cadastro.hide();
-    setTimeout(clearalert, 4000);
 
-}
+    function SetPass() {
 
 
-function clearalert() {
+        var cadastro = new Modal('accessmodal');
 
-    var alertsx = $(".alert-success").alert('close');
-}
+        var COD = new password(document.getElementById("codinput").value);
 
-function dell_row(COD) {
-    COD.parentNode.removeChild(COD);
-    console.log(COD);
-}
+        COD.setpwrd(COD.cod);
 
-
-function savearq() {
-
-
-    console.log("Saving...");
-
-
-}
-
-function SetPass() {
-
-
-    var cadastro = new Modal('accessmodal');
-
-    var COD = new password(document.getElementById("codinput").value);
-
-    COD.setpwrd(COD.cod);
-
-    console.log("The Work Password is: " + COD.cod);
-    cadastro.hide();
-}
+        console.log("The Work Password is: " + COD.cod);
+        cadastro.hide();
+    }
