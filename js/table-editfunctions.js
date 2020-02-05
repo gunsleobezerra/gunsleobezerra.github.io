@@ -85,8 +85,8 @@ function SavetoTable() {
         cod = cod + 1;
 
         $("body").append('<div class="alert alert-success alert-dismissible fade show" role="alert"> Participante Cadastrado !! </div>');
-        document.getElementById("alertR').value = "
-            ";
+        document.getElementById("alertR').value = " ";
+            
 
 
         }
