@@ -85,46 +85,50 @@ function SavetoTable() {
         cod = cod + 1;
 
         $("body").append('<div class="alert alert-success alert-dismissible fade show" role="alert"> Participante Cadastrado !! </div>');
-        document.getElementById("alertR').value = " ";
-            
 
-
-        }
-        cadastro.hide();
-        setTimeout(clearalert, 4000);
+        $("#ColunasID").append(' <th scope="col">Excluir</th>');
 
     }
+    cadastro.hide();
+    setTimeout(clearalert, 4000);
+
+}
 
 
-    function clearalert() {
+function clearalert() {
 
-        var alertsx = $(".alert-success").alert('close');
+    var alertsx = $(".alert-success").alert('close');
+}
+
+function dell_row(COD) {
+    COD.parentNode.removeChild(COD);
+    cod = cod -1;
+
+    if(!cod) {
+
+        $("#ColunasID").html(' <th scope="col">Nome</th> <th scope="col">RA</th> <th scope="col">Instituição</th>');
     }
-
-    function dell_row(COD) {
-        COD.parentNode.removeChild(COD);
-        console.log(COD);
-        if (cod != 0) { cod-- } else { document.getElementById('alertR').value = "Nenhuma Pessoa Registrada"; }
-    }
+    console.log(COD);
+}
 
 
-    function savearq() {
+function savearq() {
 
 
-        console.log("Saving...");
+    console.log("Saving...");
 
 
-    }
+}
 
-    function SetPass() {
+function SetPass() {
 
 
-        var cadastro = new Modal('accessmodal');
+    var cadastro = new Modal('accessmodal');
 
-        var COD = new password(document.getElementById("codinput").value);
+    var COD = new password(document.getElementById("codinput").value);
 
-        COD.setpwrd(COD.cod);
+    COD.setpwrd(COD.cod);
 
-        console.log("The Work Password is: " + COD.cod);
-        cadastro.hide();
-    }
+    console.log("The Work Password is: " + COD.cod);
+    cadastro.hide();
+}
