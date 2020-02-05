@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<nacoes>
+  <pais>
+  <nome>Brasil</nome>
+  <moeda>Real</moeda>
+  </pais>
+  <pais>
+  <nome>Argentina</nome>
+  <moeda>Peso argentino</moeda>
+  </pais>
+</nacoes> 

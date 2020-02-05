@@ -86,7 +86,12 @@ function SavetoTable() {
 
         $("body").append('<div class="alert alert-success alert-dismissible fade show" role="alert"> Participante Cadastrado !! </div>');
 
-        $("#ColunasID").append(' <th scope="col">Excluir</th>');
+       try{
+           var delbutton = document.getElementById(del);
+       }catch(e){
+            $("#ColunasID").append('<th scope="col" id="del">Excluir</th>');
+       }
+       
 
     }
     cadastro.hide();
@@ -102,9 +107,9 @@ function clearalert() {
 
 function dell_row(COD) {
     COD.parentNode.removeChild(COD);
-    cod = cod -1;
+    cod = cod - 1;
 
-    if(!cod) {
+    if (!cod) {
 
         $("#ColunasID").html(' <th scope="col">Nome</th> <th scope="col">RA</th> <th scope="col">Instituição</th>');
     }
@@ -113,8 +118,27 @@ function dell_row(COD) {
 
 
 function savearq() {
+    
+    var datatab = $('.tabledata').children();
+    var text ='<?xml version="1.0"?> <pessoas> ';
+    var i=0;
+    console.log("Número de pessoas: "+ datatab.length);
+    for(i=0;i<datatab.length;i=i+1){
 
+            text += "<pessoa> <nome>" + datatab[i].children[0].innerHTML + "</nome> <RA>" +  datatab[i].children[2].innerHTML + "</RA> <INSTITUTO>" + datatab[i].children[2].innerHTML + "</INSTITUTO> </pessoa>"
 
+            
+
+        
+
+    };
+
+    text+="</pessoas>"
+    
+  
+
+    var participantes = new Blob([text], {type: "text/plain;charset=utf-8"});
+    saveAs(participantes, "participantes.xml");
     console.log("Saving...");
 
 
